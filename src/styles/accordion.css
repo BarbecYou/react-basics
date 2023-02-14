@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid grey;
+}

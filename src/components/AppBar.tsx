@@ -12,10 +12,10 @@ const AppBar = () => {
                 isLoggedIn ? (
                     <>
                         <h3>{user!.name}</h3>
-                        <button>Log out</button>
+                        <button onClick={logout}>Log out</button>
                     </>
                 ) : (
-                    <button>Log in</button>
+                    <button onClick={() => login({ name: 'Zoli', age: 20 })}>Log in</button>
                 )
             }
         </div>

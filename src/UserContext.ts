@@ -6,7 +6,7 @@ export interface User {
 }
 export interface UserContextValue {
     user: User | null,
-    login: () => void,
+    login: (user: User) => void,
     logout: () => void
 }
 const UserContext = React.createContext<UserContextValue>(null as any);

@@ -3,7 +3,7 @@ import UserContext from '../UserContext';
 import '../styles/app.css'
 
 const AppBar = () => {
-    const user = useContext(UserContext);
+    const { user, login, logout } = useContext(UserContext);
     const isLoggedIn = user ? true : false;
 
     return (

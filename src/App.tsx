@@ -14,15 +14,21 @@ import PanelComponent from './components/PanelComponent';
 import Accrodion from './components/Accordion';
 import MeetingRoomList from './components/MeetingRoomList'
 import Record from './components/Record';
-import UserContext, { User } from './UserContext';
+import UserContext, { User, UserContextValue } from './UserContext';
 import UserDataPanel from './components/UserDataPanel';
 import AppBar from './components/AppBar';
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
 
+  const userContextValue: UserContextValue = {
+    user,
+    login: () => { },
+    logout: () => { }
+  }
+
   return (
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={userContextValue}>
       <AppBar />
     </UserContext.Provider>
   )

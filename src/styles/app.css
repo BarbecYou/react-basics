@@ -6,8 +6,18 @@
     margin: 0;
 }
 
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
 .appBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.dark {
+    background-color: darkslategrey;
+    color: lightgray;
 }

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import UserContext, { User, UserContextValue } from './UserContext';
 import AppBar from './components/AppBar';
-import UserContextProvider from './components/UserContextProvider';
+import UserContextProvider from './UserContextProvider';
+import ThemeContextProvider from './ThemeContextProvider';
+import MainContent from './components/MainContent';
 
 function App() {
 
   return (
-    <UserContextProvider>
-      <AppBar />
-    </UserContextProvider>
+    <ThemeContextProvider>
+      <UserContextProvider>
+        <AppBar />
+        <MainContent />
+      </UserContextProvider>
+    </ThemeContextProvider>
   )
 }
 
